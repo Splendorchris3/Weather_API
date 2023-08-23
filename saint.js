@@ -4,12 +4,11 @@ let humidity = document.getElementById("humidity");
 let tempreature = document.getElementById("tempreature");
 let condition = document.getElementById("condition");
 let pressure = document.getElementById("pressure");
-let weather = document.getElementById("weather")
+let weather = document.getElementById("weather");
 let weatherIcon = document.getElementById("weatherIcon");
 let facebookIcon = document.getElementById("facebook-icon");
 let twitterIcon = document.getElementById("twitter-icon");
 let instagramIcon = document.getElementById("instagram-icon");
-
 
 async function fetchhweatherData() {
   event.preventDefault();
@@ -28,22 +27,13 @@ async function fetchhweatherData() {
   }
 }
 
-
-
-
-
 function displayweatherForecast(weatherdata) {
   tempreature.textContent = `Temp-${weatherdata.main.temp}°c`;
-  city.textContent = `${input.value}`
-  humidity.textContent = `humidity-${weatherdata.main.humidity}%`
+  city.textContent = `${input.value}`;
+  humidity.textContent = `humidity-${weatherdata.main.humidity}%`;
   weatherIcon.src = `http://openweathermap.org/img/wn/${weatherdata.weather[0].icon}.png`;
   condition.textContent = `condition-${weatherdata.weather[0].main}`;
-  pressure.textContent = `w-speed-${weatherdata.main.pressure}-hpa`
-
-
- 
-  
-
+  pressure.textContent = `w-speed-${weatherdata.main.pressure}-hpa`;
 }
 
 function searchweather() {
@@ -51,10 +41,6 @@ function searchweather() {
     .then((data) => displayweatherForecast(data))
     .catch((error) => console.log("Error:", error));
 }
-
-
-
-
 
 function redirectToFacebook() {
   let facebookLink = document.createElement("a");
@@ -103,4 +89,3 @@ function Instagram() {
   window.location.href =
     "https://instagram.com/splendor_chris3?igshid=NTc4MTIwNjQ2YQ==";
 }
-
