@@ -1,4 +1,4 @@
-let input = document.getElementById("input");
+let cityinput = document.getElementById("input");
 let city = document.getElementById("city");
 let humidity = document.getElementById("humidity");
 let tempreature = document.getElementById("tempreature");
@@ -9,11 +9,14 @@ let weatherIcon = document.getElementById("weatherIcon");
 let facebookIcon = document.getElementById("facebook-icon");
 let twitterIcon = document.getElementById("twitter-icon");
 let instagramIcon = document.getElementById("instagram-icon");
+let button = document.querySelector(".button")
 
 async function fetchhweatherData() {
   event.preventDefault();
   let apikey = "bbb4069ff7a5498a16a35d2dd1a74ca9";
-  let location = input.value;
+  let location = cityinput.value;
+
+  
 
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=${apikey}`;
 
