@@ -16,6 +16,9 @@ async function fetchhweatherData() {
   let apikey = "bbb4069ff7a5498a16a35d2dd1a74ca9";
   let location = cityinput.value;
 
+  if (cityinput.value == "") {
+    alert("Input a City");
+  }
   
 
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&APPID=${apikey}`;
