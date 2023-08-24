@@ -9,7 +9,7 @@ let weatherIcon = document.getElementById("weatherIcon");
 let facebookIcon = document.getElementById("facebook-icon");
 let twitterIcon = document.getElementById("twitter-icon");
 let instagramIcon = document.getElementById("instagram-icon");
-let button = document.querySelector(".button")
+let button = document.getElementById("bttn")
 
 async function fetchhweatherData() {
   event.preventDefault();
